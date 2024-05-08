@@ -1,0 +1,435 @@
+$theme-black: #000000;
+$theme-blue: #017EC5;
+$theme-blue-hover: #0065a0;
+$theme-white: #ffffff;
+$theme-yellow: #D4EE1F;
+$theme-primary-font: "Poppins", sans-serif;
+$theme-secondary-font: "Dancing Script", cursive;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $theme-primary-font;
+}
+img {
+  max-width: 100%;
+}
+.top-banner {
+  width: 100%;
+  height: 100vh;
+
+  .top-bar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    min-height: 100px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,ffffff+100&0.4+0,0+100 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    @media (max-width: 767px) {
+      background: rgba(0,0,0,0.9);
+    }
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    background: $theme-black;
+  }
+
+  video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0.4;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #fff;
+
+  .navbar-collapse {
+    flex-direction: row-reverse;
+  }
+
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  h1 {
+    font-size: 44px;
+    color: #fff;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+  }
+}
+
+.slider-container {
+    margin-top: -200px;
+    position: relative;
+    z-index: 3;
+
+    h2 {
+      color: #fff;
+      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 20px;
+    }
+
+    .slick-prev, .slick-next {
+        border: solid 1px $theme-yellow;
+        width: 40px;
+        height: 40px;
+        color: transparent;
+        position: absolute;
+        right: 0;
+        background: transparent;
+        top: -50px;
+        border-radius: 50%;
+    }
+
+    .slick-next {
+      background: url(./images/right-arrow.svg) no-repeat center;
+    }
+    .slick-prev {
+      background: url(./images/left-arrow.svg) no-repeat center;
+      right: 50px;
+    }
+    .slick-list {
+      padding-bottom: 40px;
+    }
+}
+
+.slick-slide {
+  margin: 10px;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 15px 15px 0;
+  border: 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.07);
+  transition: all 0.15s ease;
+
+  img {
+    border-radius: 15px;
+  }
+
+  .btn {
+    float: right;
+    padding: 8px 20px;
+    color: $theme-white;
+    background: $theme-blue;
+    font-weight: 400;
+
+    &:hover {
+      background: $theme-blue-hover;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1), 0 10px 8px rgba(0, 0, 0, 0.015);
+}
+
+.card-body .card-title {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 24px;
+  color: #333;
+}
+
+.card-text {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #4e4e4e;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.card .container {
+  width: 88%;
+  background: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container:hover > img {
+  transform: scale(1.2);
+}
+
+.btn {
+    background: #EEECF7;
+    border: 0;
+    color: #5535F0;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 40px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+          background: #441CFF;
+}
+
+.btn:focus {
+          background: #441CFF;
+          outline: 0;  
+}
+
+.navbar-nav {
+    a {
+        color: #fff;
+        margin-left: 20px;
+
+        &:hover {
+          color: $theme-blue;
+        }
+
+        &.button-type {
+          border: solid 1px $theme-yellow;
+          border-radius: 20px;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          color: $theme-blue !important;
+          color: $theme-yellow !important;
+        }
+    }
+
+}
+
+.navbar-toggler {
+  color: $theme-white;
+  border: solid 1px $theme-white;
+  outline: none;
+  box-shadow: 0;
+}
+
+.about-wrapper {
+  padding: 80px 0;
+
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: $theme-secondary-font;
+    font-size: 40px;
+    color: $theme-blue;
+  }
+
+  .about-center {
+    align-items: center;
+  }
+}
+
+
+.footer-area {
+  background-color: #0a2430;
+  color: #fff;
+  padding: 150px 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+  h5 {
+    margin: 12px 0;
+  }
+}
+
+h2.widget-title {
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+h2.widget-title:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 2px;
+  background-color: $theme-yellow;
+  content: "";
+}
+
+.footer-box p {
+  color: #fff;
+  opacity: 0.7;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.footer-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-box ul li {
+  opacity: 0.7;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.footer-box ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-box.subscribe form input[type=email] {
+  border: none;
+  background-color: #012738;
+  width: 78%;
+  padding: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #fff;
+}
+
+.footer-box.subscribe form button {
+  width: 20%;
+  border: none;
+  background-color: #012738;
+  color: $theme-yellow;
+  padding: 14px 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+}
+
+.footer-box.subscribe form button:focus {
+  outline: none;
+}
+
+.copyright {
+  background-color: #051922;
+  border-top: 1px solid #232a35;
+}
+
+.copyright p {
+  margin: 0;
+  color: #fff;
+  opacity: 0.7;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.copyright a {
+  color: $theme-yellow;
+  font-weight: 400;
+}
+
+.copyright a:hover {
+  color: $theme-yellow;
+}
+
+.social-icons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icons ul li {
+  display: inline-block;
+}
+
+.social-icons ul li a {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+  padding: 16px 10px;
+  display: block;
+}
+
+.footer-box ul li a {
+  color: #fff;
+}
+
+.footer-box.pages ul li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer-box.pages ul li:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: $theme-yellow;
+}
+
+.services-mountain{
+	background: url(../images/bg-moutain-1.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	min-height: 713px;
+	overflow: hidden;
+
+  h2 {
+    font-family: $theme-secondary-font;
+    font-size: 40px;
+    color: $theme-blue;
+  }
+}
+.services-mountain{
+	width: 100%;
+	position: relative;
+	padding-top: 100px;
+}
+.comon-office-divs{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 30px;
+}
+.comon-office-divs figure{
+	width: 40px;
+	display: inline-block;
+	margin-right: 15px;
+}
+.comon-office-divs .right-test-of{
+	width:70%;
+}
+.comon-office-divs h5{
+	font-weight: 700;
+}
+.comon-office-divs p{
+	font-size: 13px;
+	color: #404040;
+	margin-top: 6px;
+}
